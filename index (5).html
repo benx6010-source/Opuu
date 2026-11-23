@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Opu</h1>
+  <nav>
+    <button id="memBtn" type="button">Memory</button>
+    <button id="setBtn" type="button">Settings</button>
+  </nav>
+</header>
+<main id="chat" aria-live="polite"></main>
+<form id="form">
+  <input id="input" autocomplete="off" placeholder="Talk to Opu" aria-label="Message">
+  <button id="mic" type="button" aria-label="Voice input">Mic</button>
+  <button id="send" type="submit">Send</button>
+</form>
+
+<dialog id="memDlg">
+  <h2>What Opu remembers</h2>
+  <div id="memList"></div>
+  <div class="row">
+    <button id="memExport" type="button">Export</button>
+    <button id="memClose" type="button">Close</button>
+  </div>
+</dialog>
+
+<dialog id="setDlg">
+  <h2>Settings</h2>
+  <label for="key">Gemini API key (stays on this device)</label>
+  <input id="key" type="password" autocomplete="off" placeholder="Paste key here">
+  <div class="row">
+    <button id="keySave" type="button">Save key</button>
+    <button id="clearChat" type="button">Clear conversation</button>
+    <button id="clearAll" type="button" class="danger">Delete all data</button>
+    <button id="setClose" type="button">Close</button>
+  </div>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
